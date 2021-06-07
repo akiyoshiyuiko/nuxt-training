@@ -20,6 +20,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    // Node.js モジュールを直接ロードする (ここでは SASS ファイル)
+    // 'bulma',
+    // プロジェクト内の CSS ファイル
+    // '@/assets/css/main.css',
+    // プロジェクト内の SCSS ファイル
+    // '@/assets/css/main.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -53,12 +59,12 @@ export default {
     theme_color: '#ededed',
     background_color: '#ededed',
     display: 'standalone',
-    start_url: router_base,
-    scope: router_base,
-    name: site_title,
-    short_name: site_title,
-    title: site_title,
-    description: site_description
+    start_url: 'localhost:3000',
+    scope: 'localhost:3000',
+    name: 'test',
+    short_name: 'test',
+    title: 'test',
+    description: 'test'
     // 'og:title': site_title,
     // 'og:description': site_description,
   },
