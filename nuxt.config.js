@@ -69,11 +69,13 @@ export default {
     // 'og:description': site_description,
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.md$/,
+        use: ['raw-loader']
+      });
+    }
   }
 }
