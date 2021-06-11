@@ -43,6 +43,28 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
   ],
+  modules: [
+    // nuxt-i18n用に以下を追記する
+    [
+      'nuxt-i18n',
+      {
+        // 使用する言語の設定
+        locales: [
+          { code: 'ja', name: 'Japanese', iso: 'ja_JP', file: 'ja.json' },
+          { code: 'en', name: 'English', iso: 'en-US', file: 'en.json' }
+        ],
+        defaultLocale: 'en', // デフォルトの言語
+        langDir: 'locales/', // 翻訳ファイルのディレクトリパス
+        strategy: 'prefix_and_default', // URLに言語のプレフィックスを追加するかの指定
+        vueI18n: {
+          // 翻訳ファイルが見つからなかった場合の言語を指定
+          fallbackLocale: 'en'
+        },
+        vueI18nLoader: true,
+        lazy: true // 遅延読み込みの有効化
+      }
+    ]
+  ],
 
   pwa: {
     icon: {

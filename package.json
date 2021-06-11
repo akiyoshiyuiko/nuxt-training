@@ -12,7 +12,8 @@
     "@nuxtjs/markdownit": "^2.0.0",
     "core-js": "^3.9.1",
     "frontmatter-markdown-loader": "^3.6.2",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "nuxt-i18n": "^6.27.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",
